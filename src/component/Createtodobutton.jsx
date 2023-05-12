@@ -12,8 +12,8 @@ const CreateTodoButton = () => {
 
   return (
       <button
-        className={` mr-6 ml-auto flex w-20 mt-60 items-center justify-center text-6xl font-semibold rounded-lg text-white hover:text-black pb-2 px-4 border-none cursor-pointer ${
-          hover ? "bg-white" : "bg-black"
+        className={`flex justify-center mx-auto mt-4 mb-4 w-20 text-6xl font-semibold rounded-lg text-black hover:text-white pb-2 px-4 border-none cursor-pointer ${
+          hover ? "bg-black" : "bg-white"
         }`}
         style={
           ({
@@ -23,6 +23,7 @@ const CreateTodoButton = () => {
         }
         onMouseOver={handleOnMouseOver}
         onMouseOut={handleOnMouseOut}
+        onClick={()=>console.log("cachon!!")}
       >
         +
       </button>

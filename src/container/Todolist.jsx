@@ -1,8 +1,8 @@
 const TodoList = ({ children }) => {
     return ( 
-        <ul className="flex flex-col items-center justify-center m-auto">
+        <div className="flex flex-col items-center justify-center m-auto mt-4 md:w-9/12">
             {children}
-        </ul>
+        </div>
      );
 }
  
