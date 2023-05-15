@@ -1,3 +1,4 @@
+import CreateTodoButton from "../component/Createtodobutton";
 import bramslf from "../assets/logo/Brams-White.png";
 import aestethic from "../assets/images/aestethic.jpg";
 import aestethic2 from "../assets/images/aestethic2.jpg";
@@ -6,8 +7,8 @@ import linkedin from "../assets/logo/LinkedIn.png";
 const CardInfo = () => {
   return (
     <>
-      <section
-        className="block lg:hidden md:flex md:justify-center md:items-center md:h-64 bg-cover bg-center w-full h-52"
+      <div
+        className="block lg:hidden md:flex md:justify-center md:items-center md:h-64 bg-cover bg-center w-full h-64"
         style={{ backgroundImage: `url(${aestethic})` }}
       >
         <div className="bg-black text-center w-full h-full p-2 opacity-75">
@@ -31,9 +32,10 @@ const CardInfo = () => {
               <img src={linkedin} alt="LinkedIn" className="md:w-8 w-6" />
             </a>
           </div>
+          <CreateTodoButton />
         </div>
-      </section>
-      <section
+      </div>
+      <div
         className="hidden lg:flex lg:justify-center lg:items-center bg-cover bg-center w-1/2"
         style={{ backgroundImage: `url(${aestethic2})` }}
       >
@@ -58,8 +60,10 @@ const CardInfo = () => {
               <img src={linkedin} alt="LinkedIn" className="w-12" />
             </a>
           </div>
+          <CreateTodoButton />
         </div>
-      </section>
+      </div>
+      
     </>
   );
 };

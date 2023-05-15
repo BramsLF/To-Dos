@@ -1,7 +1,7 @@
 import search from "../assets/icon/search.png";
 const TodoSearch = ({ searchValue, setSearchValue}) => {
   return (
-    <div className="flex mx-auto items-center justify-center content-center ">
+    <div className="flex mx-auto items-center justify-center content-center">
       <input
         placeholder="Busca tu tarea aqui!!"
         type="text"
