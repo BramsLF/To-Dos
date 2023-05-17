@@ -10,7 +10,7 @@ const TodoSearch = () => {
     <>
     <div className="lg:hidden flex items-center justify-center content-center">
       <input
-        placeholder="Busca tu To-Do aqui!!"
+        placeholder="Search your To-Do here!!"
         type="text"
         className="py-3 px-6 md:w-2/3 w-3/4 outline-none border-b-2"
         value={searchValue}

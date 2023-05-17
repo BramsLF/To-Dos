@@ -48,12 +48,12 @@ const CardInfo = () => {
         <div className="flex flex-col items-center justify-center px-16 py-8 rounded-lg bg-sky-900 text-center opacity-75">
           <div className="flex flex-col items-center justify-center content-center">
             <h1 className="text-sky-50 font-lato font-black text-center pt-6 text-5xl tracking-wider">
-              Tus To-Dos!
+              Your To-Dos!
             </h1>
             <div className="flex justify-center font-lato font-light text-center px-8 pb-8 text-2xl text-sky-50">
               <p>
-                Completados son{" "}
-                <span className="font-semibold">{completedTodos}</span> de{" "}
+                Completed are{" "}
+                <span className="font-semibold">{completedTodos}</span> of{" "}
                 <span className="font-semibold">{totalTodos}</span> !!
               </p>
             </div>
@@ -63,7 +63,7 @@ const CardInfo = () => {
 
           <div className="hidden lg:flex my-2 items-center justify-center content-center">
             <input
-              placeholder="Busca tu To-Do aqui!!"
+              placeholder="Search your To-Do here!!"
               type="text"
               className="py-3 px-6 font-semibold outline-none border-b-2 bg-transparent text-sky-50"
               value={searchValue}

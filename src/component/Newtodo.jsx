@@ -33,7 +33,7 @@ const NewTodo = () => {
             X
           </div>
           <p className="text-center text-2xl font-bold tracking-wider mb-1 text-sky-500">
-            NUEVO TO-DO
+            New TO-DO
           </p>
           <textarea
             placeholder="To-Do"
@@ -46,14 +46,14 @@ const NewTodo = () => {
             className="absolute rounded-l-2xl bg-sky-500 text-sky-50 p-2 text-xs font-bold tracking-wider mt-20 ml-64 cursor-pointer transition-all duration-2500 ease-linear shadow-lg hover:bg-sky-600"
             onClick={() => onSubmit()}
           >
-            AGREGAR
+            ADD TO-DO
           </div>
         </div>
       </div>
       
       <div className="hidden lg:flex flex-col items-center justify-center m-auto h-52 w-72 p-2 bg-white rounded-lg shadow-lg">
         <p className="flex text-center text-2xl font-bold tracking-wider mb-1 text-sky-500">
-          NUEVO TO-DO
+          New TO-DO
           <img src={bramslf} alt="MyBrand" className="w-10 h-10 m-auto " />
         </p>
         <textarea
@@ -68,7 +68,7 @@ const NewTodo = () => {
           className="absolute rounded-l-2xl bg-sky-500 text-sky-50 p-2 text-xs font-bold tracking-wider mt-20 ml-64 cursor-pointer shadow-lg hover:bg-sky-600"
           onClick={() => onSubmit()}
         >
-          AGREGAR
+          ADD TO-DO
         </div>
       </div>
     </section>
