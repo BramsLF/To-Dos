@@ -1,18 +1,22 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useRef } from "react";
 import { useTodoContext } from "../hooks/useTodoContext";
 import bramslf from "../assets/logo/Brams.png";
 const NewTodo = () => {
   const { createTodo, openModal, setOpenModal } = useContext(useTodoContext);
 
   const [addTodo, setAddTodo] = useState("");
+  const textRef = useRef(null);
 
   const onChange = (event) => {
     setAddTodo(event.target.value);
   };
-
+  const onClear = () =>{
+      textRef.current.value = " ";
+  }
   const onSubmit = (event) => {
     createTodo(addTodo);
     setOpenModal(false);
+    onClear();
   };
   const onClose = (event) => {
     setOpenModal(false);
@@ -47,7 +51,7 @@ const NewTodo = () => {
         </div>
       </div>
       
-      <div className="flex flex-col items-center justify-center m-auto h-52 w-72 p-2 bg-white rounded-lg shadow-lg">
+      <div className="hidden lg:flex flex-col items-center justify-center m-auto h-52 w-72 p-2 bg-white rounded-lg shadow-lg">
         <p className="flex text-center text-2xl font-bold tracking-wider mb-1 text-sky-500">
           NUEVO TO-DO
           <img src={bramslf} alt="MyBrand" className="w-10 h-10 m-auto " />
@@ -56,6 +60,7 @@ const NewTodo = () => {
           placeholder="To-Do"
           className="bottom-2 border-b-2 p-1 h-12 w-9/12 bg-transparent outline-none text-sm"
           type="text"
+          ref={textRef}
           onChange={onChange}
         />
         <br />

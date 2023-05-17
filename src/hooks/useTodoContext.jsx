@@ -32,7 +32,7 @@ const TodoProvider = ({ children }) => {
           });
           saveToDos(newTodos);
         };
-
+        
   const handleCompleted = (text) => {
     const newTodos = [...toDos];
     const todoIndex = newTodos.findIndex((todo) => todo.text === text);

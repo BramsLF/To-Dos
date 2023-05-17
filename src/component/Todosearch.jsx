@@ -21,8 +21,6 @@ const TodoSearch = () => {
       <img src={search} alt="Search" className="w-6 h-6 -ml-10 "
       />
     </div>
-
-    
     </>
    
   );

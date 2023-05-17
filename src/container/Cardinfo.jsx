@@ -42,7 +42,7 @@ const CardInfo = () => {
       </div>
 
       <div
-        className="hidden lg:flex lg:justify-center lg:items-center bg-cover bg-center w-1/2"
+        className="hidden fixed inset-0 lg:flex lg:justify-center lg:items-center bg-cover bg-center w-1/2"
         style={{ backgroundImage: `url(${aestethic2})` }}
       >
         <div className="flex flex-col items-center justify-center px-16 py-8 rounded-lg bg-sky-900 text-center opacity-75">
@@ -65,7 +65,7 @@ const CardInfo = () => {
             <input
               placeholder="Busca tu To-Do aqui!!"
               type="text"
-              className="py-3 px-6 font-semibold outline-none border-b-2 bg-transparent"
+              className="py-3 px-6 font-semibold outline-none border-b-2 bg-transparent text-sky-50"
               value={searchValue}
               onChange={(event) => {
                 setSearchValue(event.target.value);

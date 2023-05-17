@@ -9,6 +9,8 @@ import Loader from "../component/Loader";
 import { useTodoContext } from "../hooks/useTodoContext";
 import { useContext } from "react";
 import CreateTodoButton from "../component/Createtodobutton";
+import ErrorNoF from "../component/ErrorNoF";
+import CreaTuPrimerTodo from "../component/CreaTuPrimerTodo";
 
 const LayOut = () => {
   const {
@@ -23,14 +25,20 @@ const LayOut = () => {
   return (
     <section className="min-h-screen lg:flex bg-white">
       <CardInfo />
-      <div className="lg:mx-auto lg:mt-12 lg:w-1/2 lg:shadow-lg lg:rounded-lg lg:bg-white">
+      <div className="lg:ml-auto lg:w-1/2 lg:shadow-lg lg:rounded-lg lg:bg-white">
         <TodoCount />
         <TodoSearch />
         <TodoList>
-          {loading && <Loader />}
-          {error && <p>Se ha producido un error</p>}
+          {loading &&
+          <>
+            <Loader />
+            <Loader />
+            <Loader />
+            <Loader />
+          </> }
+          {error && <ErrorNoF/>}
           {!loading && searchedTodos.length === 0 && (
-            <p>Crea tu primer ToDo!!</p>
+            <CreaTuPrimerTodo/>
           )}
 
           {searchedTodos.map((todo) => (
