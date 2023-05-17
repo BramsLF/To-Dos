@@ -5,11 +5,6 @@ const useLocalStorage = (itemName, initialValue) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
-  const saveItem = (newItem) => {
-    localStorage.setItem(itemName, JSON.stringify(newItem));
-    setItem(newItem);
-  };
-
   useEffect(() => {
     try {
       const lStorageItem = localStorage.getItem(itemName);
@@ -26,7 +21,12 @@ const useLocalStorage = (itemName, initialValue) => {
       setLoading(false);
       setError(true);
     }
-  }, 2000 );
+  }, [itemName, initialValue]);
+
+  const saveItem = (newItem) => {
+    localStorage.setItem(itemName, JSON.stringify(newItem));
+    setItem(newItem);
+  };
 
   return {
     item,
