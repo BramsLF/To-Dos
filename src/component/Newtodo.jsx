@@ -43,10 +43,9 @@ const NewTodo = () => {
           />
           <br />
           <div
-            className="absolute rounded-l-2xl bg-sky-500 text-sky-50 p-2 text-xs font-bold tracking-wider mt-20 ml-64 cursor-pointer transition-all duration-2500 ease-linear shadow-lg hover:bg-sky-600"
+            className="absolute w-24 rounded-l-2xl bg-sky-500 text-sky-50 pl-2 py-2 text-xs font-bold tracking-wider mt-20 ml-60 cursor-pointer shadow-lg hover:bg-sky-600"
             onClick={() => onSubmit()}
-          >
-            ADD TO-DO
+          >ADD TO-DO
           </div>
         </div>
       </div>
