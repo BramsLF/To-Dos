@@ -9,7 +9,7 @@ const useLocalStorage = (itemName, initialValue) => {
     try {
       const lStorageItem = localStorage.getItem(itemName);
       let parsedItem;
-
+  
       if (!lStorageItem || typeof lStorageItem !== "string") {
         parsedItem = initialValue;
       } else {
@@ -21,7 +21,8 @@ const useLocalStorage = (itemName, initialValue) => {
       setLoading(false);
       setError(true);
     }
-  }, []);
+  }, [initialValue, itemName]);
+  
 
   const saveItem = (newItem) => {
     localStorage.setItem(itemName, JSON.stringify(newItem));

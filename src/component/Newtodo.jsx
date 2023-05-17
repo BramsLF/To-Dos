@@ -2,7 +2,7 @@ import { useState, useContext, useRef } from "react";
 import { useTodoContext } from "../hooks/useTodoContext";
 import bramslf from "../assets/logo/Brams.png";
 const NewTodo = () => {
-  const { createTodo, openModal, setOpenModal } = useContext(useTodoContext);
+  const { createTodo, setOpenModal } = useContext(useTodoContext);
 
   const [addTodo, setAddTodo] = useState("");
   const textRef = useRef(null);

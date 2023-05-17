@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { useTodoContext } from "../hooks/useTodoContext";
 const CreateTodoButton = () => {
   const { openModal, setOpenModal } = useContext(useTodoContext);
