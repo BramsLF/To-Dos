@@ -1,10 +1,7 @@
-import { TodoProvider } from "./hooks/Todocontext";
+import { TodoProvider } from "./hooks/useTodoContext";
 import LayOut from "./page/layout";
 
 const App = () => {
-
-  
-
   return (
     <TodoProvider>
       <LayOut />

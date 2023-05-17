@@ -8,22 +8,13 @@ const useLocalStorage = (itemName, initialValue) => {
   useEffect(() => {
     try {
       const lStorageItem = localStorage.getItem(itemName);
-
       let parsedItem;
 
       if (!lStorageItem || typeof lStorageItem !== "string") {
         parsedItem = initialValue;
       } else {
-        try {
-          parsedItem = JSON.parse(lStorageItem);
-          setItem(parsedItem);
-        } catch (error) {
-          console.error(
-            "Error al analizar el valor almacenado en el localStorage",
-            error
-          );
-          parsedItem = initialValue;
-        }
+        parsedItem = JSON.parse(lStorageItem);
+        setItem(parsedItem);
       }
       setLoading(false);
     } catch (error) {
@@ -33,7 +24,7 @@ const useLocalStorage = (itemName, initialValue) => {
   }, []);
 
   const saveItem = (newItem) => {
-    localStorage.setItem("itemName", JSON.stringify(newItem));
+    localStorage.setItem(itemName, JSON.stringify(newItem));
     setItem(newItem);
   };
 

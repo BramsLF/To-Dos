@@ -3,12 +3,12 @@ import check1 from "../assets/icon/check.png";
 import check2 from "../assets/icon/CheckF.png";
 const TodoItems = ({ text, completed, onDelete, onCompleted, onCheck }) => {
   return (
-    <>
+    <section className="flex justify-center w-full">
       <div
         className={`${
           completed
-            ? "bg-slate-400 flex w-11/12 mt-2 p-1 items-center justify-center shadow-lg mb-4 rounded-lg border-solid border-gray-200"
-            : "bg-white flex w-11/12 mt-2 p-1 items-center justify-center shadow-lg mb-4 hover:bg-gray-100 rounded-lg border-solid border-gray-200"
+            ? "bg-sky-200 flex w-11/12 mt-2 p-1 items-center justify-center shadow-lg mb-4 rounded-lg border-solid border-sky-200"
+            : "bg-white flex w-11/12 mt-2 p-1 items-center justify-center shadow-lg mb-4 hover:bg-sky-50 rounded-lg border-solid border-sky-200"
         }`}
       >
         <img
@@ -25,7 +25,7 @@ const TodoItems = ({ text, completed, onDelete, onCompleted, onCheck }) => {
         />
         <p
           className={`${
-            completed ? "py-4 text-sm text-white line-through" : "py-4 text-sm"
+            completed ? "py-4 text-sm text-sky-700 line-through" : "py-4 text-sm"
           }`}
         >
           {text}
@@ -37,7 +37,7 @@ const TodoItems = ({ text, completed, onDelete, onCompleted, onCheck }) => {
           onClick={onDelete}
         />
       </div>
-    </>
+    </section>
   );
 };
 
